@@ -1,7 +1,7 @@
 ﻿# Tecnológico de Software
 ## Materia: Fundamentos de álgebra
-## Alumno: Angel Abraham Lugo Saenz
-## Grupo: B
+## Alumno: Roberto Balmes Solis
+## Grupo: C
 ## Actividad #16.  Matrices documentación
 
 
