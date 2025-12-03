@@ -1,615 +1,272 @@
-# Tecnológico de Software
+﻿# Tecnológico de Software
 ## Materia: Fundamentos de álgebra
-## Alumno: Balmes Solis Roberto
-## Actividad \#16 - Matrices doc
+## Alumno: Angel Abraham Lugo Saenz
+## Grupo: B
+## Actividad #16.  Matrices documentación
+
+
+# Objetivo
+
+El objetivo es comprender los diferentes tipos de matrices y dominar las operaciones básicas como suma, resta, multiplicación y transposición, para aplicar estos conceptos en la resolución de problemas algebraicos y en la manipulación de sistemas lineales. Además, se busca verificar propiedades clave, como la asociativa de la multiplicación de matrices.
 
 ---
-### Identificación de matrices
+### Muestra  
 
-Matriz identidad, porque la diagonal está compuestos por solo unos y los elementos fuera de la diagonal son ceros.
+*Calcula la suma de A y B*
 
-$$ A =
-\begin{pmatrix}
-1 & 0 \\
-0 & 1 \\
-\end{pmatrix}
 $$
-
-MUESTRA
-
-Calcula la suma de A y B
-
-$$ A =
+A =
 \begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 \end{pmatrix}
 $$
 
-$$ B =
+$$
+B =
 \begin{pmatrix}
 9 & 10 & 11 \\
 12 & 13 & 14 \\
 \end{pmatrix}
 $$
 
-$$ A + B =
+*Desarrollo:*
+
+$$
+A + B =
 \begin{pmatrix}
 1 + 9 & 2 + 10 & 3 + 11 \\
 4 + 12 & 5 + 13 & 6 + 14 \\
 \end{pmatrix}
 $$
 
-$$ A + B =
+*Resultado final:*
+
+$$
+A + B =
 \begin{pmatrix}
 10 & 12 & 14 \\
 16 & 18 & 20 \\
 \end{pmatrix}
 $$
 
----
-# OTRO EJERCICIO
-...
-# Determinantes y Aplicaciones – Ejercicios 1 a 5
+## Índice
+- [Ejercicio 1: Clasificación de matrices](#ejercicio-1-clasificación-de-matrices)
+- [Ejercicio 2: Operaciones con matrices](#ejercicio-2-operaciones-con-matrices)
+- [Ejercicio 3: Multiplicación cadena](#ejercicio-3-multiplicación-cadena)
 
 ---
 
-## Ejercicio 1: Determinantes 2×2
+# Ejercicio 1: Clasificación de matrices
 
-Para una matriz:
+## Objetivo del ejercicio: 
 
-```math
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-```
+El objetivo es aprender a identificar y clasificar las matrices según sus propiedades, como ser cuadradas, diagonales, simétricas o triangulares, y aplicar estos conocimientos en la resolución de problemas algebraicos y en el análisis de sistemas lineales.
 
-el determinante se calcula como:
+### a) 
 
-```math
-\det =
-ad - bc
-```
+$$A = \begin{bmatrix}
+1 & 0 \\
+0 & 1 
+\end{bmatrix}$$
 
----
+Es una matriz  **identidad**  porque tiene **unos** en su diagonal principal y **ceros** en todas las demás posiciones.
 
-### 1. Determinante de A
+### b) 
 
-```math
-A =
-\begin{pmatrix}
-5 & 2 \\
-3 & 1
-\end{pmatrix}
-```
+$$ B = \begin{bmatrix}
+3 & 0 & 0 \\
+0 & -2 & 0 \\
+0 & 0 & 5 
+\end{bmatrix}  $$
 
-**Procedimiento**
+Es una matriz  **diagonal** porque **todos sus elementos son ceros**, **salvo en la diagonal principal**.
 
-1. Identificar elementos: \(a=5,\ b=2,\ c=3,\ d=1\).
-2. Sustituir en la fórmula:
+### c)
 
-```math
-\det(A) = (5)(1) - (2)(3)
-```
+$$C = \begin{bmatrix}
+2 & 1 & 4 \\
+1 & 3 & 5 \\
+4 & 5 & 6 
+\end{bmatrix}  $$
 
-3. Operar:
+Es una matriz **simétrica** porque se cumple que **$a_{ij} = a_{ji}$**,  lo que indica que es simétrica con respecto a su diagonal principal.
 
-```math
-\det(A) = 5 - 6 = -1
-```
+### d)
 
-**Resultado**
-
-```math
-\det(A) = -1
-```
-
----
-
-### 2. Determinante de B
-
-```math
-B =
-\begin{pmatrix}
--1 & 4 \\
-2 & -8
-\end{pmatrix}
-```
-
-**Procedimiento**
-
-1. Elementos: \(a=-1,\ b=4,\ c=2,\ d=-8\).
-
-```math
-\det(B) = (-1)(-8) - (4)(2) = 8 - 8 = 0
-```
-
-**Resultado**
-
-```math
-\det(B) = 0
-```
-
----
-
-### 3. Determinante de C
-
-```math
-C =
-\begin{pmatrix}
-6 & 9 \\
-2 & 3
-\end{pmatrix}
-```
-
-**Procedimiento**
-
-```math
-\det(C) = (6)(3) - (9)(2) = 18 - 18 = 0
-```
-
-**Resultado**
-
-```math
-\det(C) = 0
-```
-
----
-
-### 4. Determinante de D
-
-```math
-D =
-\begin{pmatrix}
-0 & 5 \\
--5 & 0
-\end{pmatrix}
-```
-
-**Procedimiento**
-
-```math
-\det(D) = (0)(0) - (5)(-5) = 0 - (-25) = 25
-```
-
-**Resultado**
-
-```math
-\det(D) = 25
-```
-
----
-
-## Ejercicio 2: Regla de Sarrus (Matrices 3×3)
-
-Para una matriz:
-
-```math
-M =
-\begin{pmatrix}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33}
-\end{pmatrix}
-```
-
-La regla de Sarrus indica:
-
-```math
-\det(M) =
-(a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32})
--
-(a_{13}a_{22}a_{31} + a_{11}a_{23}a_{32} + a_{12}a_{21}a_{33})
-```
-
----
-
-### 1. Determinante de E
-
-```math
-E =
-\begin{pmatrix}
+$$ D = \begin{bmatrix}
 1 & 2 & 3 \\
-0 & 1 & 4 \\
-5 & 6 & 0
-\end{pmatrix}
-```
+0 & 4 & 5 \\
+0 & 0 & 6 
+\end{bmatrix}  $$
 
-#### Suma de diagonales principales
-
-```math
-\text{Suma} =
-1\cdot 1\cdot 0
-+ 2\cdot 4\cdot 5
-+ 3\cdot 0\cdot 6
-= 0 + 40 + 0 = 40
-```
-
-#### Suma de diagonales secundarias
-
-```math
-\text{Resta} =
-3\cdot 1\cdot 5
-+ 1\cdot 4\cdot 6
-+ 2\cdot 0\cdot 0
-= 15 + 24 + 0 = 39
-```
-
-#### Determinante
-
-```math
-\det(E) = \text{Suma} - \text{Resta} = 40 - 39 = 1
-```
-
-**Resultado**
-
-```math
-\det(E) = 1
-```
+Es una matriz  **triangular superior** porque  **todos los elementos situados por debajo de la diagonal principal son ceros**.
 
 ---
 
-### 2. Determinante de F
+# Ejercicio 2: Operaciones con matrices
 
-```math
-F =
-\begin{pmatrix}
-2 & -1 & 3 \\
-1 & 4 & 0 \\
-3 & 2 & -2
-\end{pmatrix}
-```
+## Objetivo del ejercicio:
 
-#### Suma de diagonales principales
+El objetivo es dominar las operaciones elementales con matrices, como la suma, resta, multiplicación y transposición, para poder manipular y resolver problemas de matrices de manera efectiva y comprender su funcionamiento básico en diversos contextos matemáticos.
 
-```math
-\text{Suma} =
-2\cdot 4\cdot (-2)
-+ (-1)\cdot 0\cdot 3
-+ 3\cdot 1\cdot 2
-= -16 + 0 + 6 = -10
-```
+Dadas las matrices:
 
-#### Suma de diagonales secundarias
+$$ A = \begin{bmatrix}
+2 & -1 \\
+3 & 4 
+\end{bmatrix}, \quad B = \begin{bmatrix}
+5 & 2 \\
+-1 & 3 
+\end{bmatrix} $$
 
-```math
-\text{Resta} =
-3\cdot 4\cdot 3
-+ 2\cdot 0\cdot 2
-+ (-1)\cdot 1\cdot (-2)
-= 36 + 0 + 2 = 38
-```
+Calcula: 
 
-#### Determinante
+### a) Suma de matrices: \( A + B \)
+$$ A + B = \begin{bmatrix}
+2 + 5 & -1 + 2 \\
+3 + (-1) & 4 + 3
+\end{bmatrix} = \begin{bmatrix}
+7 & 1 \\
+2 & 7
+\end{bmatrix} $$
 
-```math
-\det(F) = \text{Suma} - \text{Resta} = -10 - 38 = -48
-```
+### b) Resta y multiplicación de matrices: \(2A - B \)
 
-**Resultado**
+$$ 2A - B = 2 \begin{bmatrix}
+2 & -1 \\
+3 & 4
+\end{bmatrix} - \begin{bmatrix}
+5 & 2 \\
+-1 & 3
+\end{bmatrix} = \begin{bmatrix}
+4 & -2 \\
+6 & 8
+\end{bmatrix} - \begin{bmatrix}
+5 & 2 \\
+-1 & 3
+\end{bmatrix} = \begin{bmatrix}
+-1 & -4 \\
+7 & 5
+\end{bmatrix} $$
 
-```math
-\det(F) = -48
-```
+### c) Multiplicación de matrices: \( AB \)
+$$ AB = \begin{bmatrix}
+2 & -1 \\
+3 & 4
+\end{bmatrix} \begin{bmatrix}
+5 & 2 \\
+-1 & 3
+\end{bmatrix} = \begin{bmatrix}
+2\cdot5+(-1)\cdot(-1) & 2\cdot2+(-1)\cdot3\\
+3\cdot5+4\cdot(-1)    & 3\cdot2+4\cdot3
+\end{bmatrix} = \begin{bmatrix}
+11 & 1 \\
+11 & 18
+\end{bmatrix} $$
 
----
+### d) Multiplicación de matrices: \( BA \)
+$$ BA = \begin{bmatrix}
+5 & 2 \\
+-1 & 3
+\end{bmatrix} \begin{bmatrix}
+2 & -1 \\
+3 & 4
+\end{bmatrix} = \begin{bmatrix}
+(5\cdot2) + (2\cdot3) & (5\cdot-1) + (2\cdot4) \\
+(-1\cdot2) + (3\cdot3) & (-1\cdot-1) + (3\cdot4)
+\end{bmatrix} = \begin{bmatrix}
+16 & 3 \\
+7 & 13
+\end{bmatrix} $$
 
-## Ejercicio 3: Método de Cofactores
-
-```math
-G =
-\begin{pmatrix}
-1 & 0 & 2 \\
--1 & 3 & 1 \\
-2 & 0 & 1
-\end{pmatrix}
-```
-
-Usamos expansión por la **primera fila**:
-
-```math
-\det(G) = 1\cdot C_{11} + 0\cdot C_{12} + 2\cdot C_{13}
-```
-
-El término con \(C_{12}\) es cero.
-
----
-
-### 1. Cofactor \(C_{11}\)
-
-Submatriz (eliminando fila 1 y columna 1):
-
-```math
-\begin{pmatrix}
-3 & 1 \\
-0 & 1
-\end{pmatrix}
-```
-
-Determinante:
-
-```math
-(3)(1) - (1)(0) = 3
-```
-
-Signo:
-
-```math
-(-1)^{1+1} = +1
-```
-
-```math
-C_{11} = 3
-```
+### e) Transpuesta de la matriz A: \( A^T \)
+$$ A^T = \begin{bmatrix}
+2 & 3 \\
+-1 & 4
+\end{bmatrix} $$
 
 ---
 
-### 2. Cofactor \(C_{13}\)
+# Ejercicio 3: Multiplicación cadena
 
-Submatriz (eliminando fila 1 y columna 3):
-
-```math
-\begin{pmatrix}
--1 & 3 \\
-2 & 0
-\end{pmatrix}
-```
-
-Determinante:
-
-```math
-(-1)(0) - (3)(2) = -6
-```
-
-Signo:
-
-```math
-(-1)^{1+3} = +1
-```
-
-```math
-C_{13} = -6
-```
+## Objetivo del ejercicio:
+El objetivo es comprobar la propiedad asociativa de la multiplicación de matrices mediante el cálculo de productos sucesivos, asegurando que el orden de las operaciones no afecta el resultado. Esto permite entender mejor cómo interactúan las matrices en operaciones compuestas y fortalecer los fundamentos del álgebra lineal.
 
 ---
 
-### 3. Sustitución en la fórmula
+*Verificar que* $(AB)C = A(BC)$ 
 
-```math
-\det(G) = 1(3) + 0 + 2(-6)
-```
+Dadas las matrices:
 
-```math
-\det(G) = 3 - 12 = -9
-```
-
-**Resultado**
-
-```math
-\det(G) = -9
-```
-
----
-
-## Ejercicio 4: Verificar propiedades
-
-Matrices:
-
-```math
-A =
-\begin{pmatrix}
-2 & 1 \\
-1 & 3
-\end{pmatrix}
-```
-
-```math
-B =
-\begin{pmatrix}
+$$ A = \begin{bmatrix}
 1 & 2 \\
-3 & 1
-\end{pmatrix}
-```
+3 & 4 
+\end{bmatrix}, \quad B = \begin{bmatrix}
+2 & 0 \\
+1 & 3 
+\end{bmatrix}, \quad C = \begin{bmatrix}
+1 & 1 \\
+0 & 2
+\end{bmatrix} $$
 
-Propiedades a verificar:
-
-1. ```math
-   \det(AB) = \det(A)\det(B)
-   ```
-2. ```math
-   \det(A^T) = \det(A)
-   ```
-
----
-
-### 1. Cálculo de \(\det(A)\)
-
-```math
-\det(A) = (2)(3) - (1)(1) = 6 - 1 = 5
-```
-
-**Resultado**
-
-```math
-\det(A) = 5
-```
-
----
-
-### 2. Cálculo de \(\det(B)\)
-
-```math
-\det(B) = (1)(1) - (2)(3) = 1 - 6 = -5
-```
-
-**Resultado**
-
-```math
-\det(B) = -5
-```
-
----
-
-### 3. Producto \(AB\)
-
-```math
-AB =
-\begin{pmatrix}
-2 & 1 \\
-1 & 3
-\end{pmatrix}
-\begin{pmatrix}
+### a) Calcular \( (AB)C \)
+$$ AB = \begin{bmatrix}
 1 & 2 \\
-3 & 1
-\end{pmatrix}
-=
-\begin{pmatrix}
-5 & 5 \\
-10 & 5
-\end{pmatrix}
-```
-
-Determinante:
-
-```math
-\det(AB) = (5)(5) - (5)(10) = 25 - 50 = -25
-```
-
-**Resultado**
-
-```math
-\det(AB) = -25
-```
-
----
-
-### 4. Verificación de \(\det(AB) = \det(A)\det(B)\)
-
-```math
-\det(A)\det(B) = 5 \cdot (-5) = -25
-```
-
-Como:
-
-```math
-\det(AB) = -25
-```
-
-se cumple:
-
-```math
-\det(AB) = \det(A)\det(B)
-```
-
----
-
-### 5. Verificación de \(\det(A^T) = \det(A)\)
-
-Traspuesta:
-
-```math
-A^T =
-\begin{pmatrix}
-2 & 1 \\
+3 & 4
+\end{bmatrix} \begin{bmatrix}
+2 & 0 \\
 1 & 3
-\end{pmatrix}
-```
+\end{bmatrix} = \begin{bmatrix}
+(1\cdot2) + (2\cdot1) & (1\cdot0) + (2\cdot3) \\
+(3\cdot2) + (4\cdot1) & (3\cdot0) + (4\cdot3)
+\end{bmatrix} = \begin{bmatrix}
+4 & 6 \\
+10 & 12
+\end{bmatrix} $$
 
-Es igual a \(A\), así que:
+$$ (AB)C = \begin{bmatrix}
+4 & 6 \\
+10 & 12
+\end{bmatrix} \begin{bmatrix}
+1 & 1 \\
+0 & 2
+\end{bmatrix} = \begin{bmatrix}
+(4\cdot1) + (6\cdot0) & (4\cdot1) + (6\cdot2) \\
+(10\cdot1) + (12\cdot0) & (10\cdot1) + (12\cdot2)
+\end{bmatrix} = \begin{bmatrix}
+4 & 16 \\
+10 & 34
+\end{bmatrix} $$
 
-```math
-\det(A^T) = 5 = \det(A)
-```
+### b) Calcular \( A(BC) \)
+$$ BC = \begin{bmatrix}
+2 & 0 \\
+1 & 3
+\end{bmatrix} \begin{bmatrix}
+1 & 1 \\
+0 & 2
+\end{bmatrix} = \begin{bmatrix}
+(2\cdot1) + (0\cdot0) & (2\cdot1) + (0\cdot2) \\
+(1\cdot1) + (3\cdot0) & (1\cdot1) + (3\cdot2)
+\end{bmatrix} = \begin{bmatrix}
+2 & 2 \\
+1 & 7
+\end{bmatrix} $$
 
-La propiedad se verifica.
+$$ A(BC) = \begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix} \begin{bmatrix}
+2 & 2 \\
+1 & 7
+\end{bmatrix} = \begin{bmatrix}
+(1\cdot2) + (2\cdot1) & (1\cdot2) + (2\cdot7) \\
+(3\cdot2) + (4\cdot1) & (3\cdot2) + (4\cdot7)
+\end{bmatrix} = \begin{bmatrix}
+4 & 16 \\
+10 & 34
+\end{bmatrix} $$
 
----
+**Conclusión:** la propiedad asociativa de la multiplicación de matrices garantiza que el resultado de la multiplicación no depende de cómo agrupemos las matrices, esto quiere decir, podemos agrupar las matrices de diferentes maneras, como en **$(AB)C = A(BC)$**, y siempre obtendremos el mismo resultado, siempre que las dimensiones sean adecuadas. Esta propiedad es fundamental para realizar cálculos más complejos de manera flexible y eficiente en álgebra lineal.
 
-## Ejercicio 5: Aplicación geométrica
-
-Vectores:
-
-```math
-\vec{u} = (3, 2), \quad \vec{v} = (1, 4)
-```
-
-El área del paralelogramo formado por \(\vec{u}\) y \(\vec{v}\) es:
-
-```math
-\text{Área} = |\det(M)|
-```
-
-donde:
-
-```math
-M =
-\begin{pmatrix}
-3 & 2 \\
-1 & 4
-\end{pmatrix}
-```
-
----
-
-### a) Área del paralelogramo
-
-Determinante:
-
-```math
-\det(M) = (3)(4) - (2)(1) = 12 - 2 = 10
-```
-
-Área:
-
-```math
-\text{Área} = |\det(M)| = |10| = 10
-```
-
-**Respuesta:** El área del paralelogramo es **10**.
-
----
-
-### b) ¿Cambia el área si se intercambian los vectores?
-
-Si intercambiamos los vectores:
-
-```math
-M' =
-\begin{pmatrix}
-1 & 4 \\
-3 & 2
-\end{pmatrix}
-```
-
-Determinante:
-
-```math
-\det(M') = (1)(2) - (4)(3) = 2 - 12 = -10
-```
-
-Área:
-
-```math
-|\det(M')| = |-10| = 10
-```
-
-**Respuesta:** El área **no cambia**, sigue siendo **10**; solo cambia el **signo del determinante**.
-
----
-
-### c) Interpretación del signo del determinante
-
-- Si el determinante es **positivo**, la orientación de \(\vec{u}\) a \(\vec{v}\) es **antihoraria** (orientación estándar).
-- Si el determinante es **negativo**, la orientación es **horaria** (se invierte el sentido).
-
-El signo del determinante indica la **orientación** de los vectores en el plano.
-
-
-
-
-
-
-
-
----
